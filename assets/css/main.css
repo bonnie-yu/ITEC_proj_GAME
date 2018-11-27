@@ -96,6 +96,10 @@ video {
     vertical-align: baseline;
 }
 
+iframe {
+    overflow: scroll;
+}
+
 article,
 aside,
 details,
