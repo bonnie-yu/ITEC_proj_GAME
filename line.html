@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+    body {
+        background-color: #F1F3F3
+    }
+    
+    .axis {
+        font: 10px sans-serif;
+    }
+    
+    .axis path,
+    .axis line {
+        fill: none;
+        stroke: #D4D8DA;
+        stroke-width: 2px;
+        shape-rendering: crispEdges;
+    }
+    
+    .line {
+        fill: none;
+        stroke: #6F257F;
+        stroke-width: 5px;
+    }
+    
+    .overlay {
+        fill: none;
+        pointer-events: all;
+    }
+    
+    .focus circle {
+        fill: #F1F3F3;
+        stroke: #6F257F;
+        stroke-width: 5px;
+    }
+    
+    .hover-line {
+        stroke: #6F257F;
+        stroke-width: 2px;
+        stroke-dasharray: 3, 3;
+    }
+</style>
+
+<body>
+
+    <!-- <svg width="700" height="400"></svg> -->
+    <svg width="340" height="350"></svg>
+
+</body>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3-time.v1.min.js"></script>
+<script src="https://d3js.org/d3-time-format.v2.min.js"></script>
+<script>
+    var svg = d3.select("svg"),
+        margin = {
+            top: 20,
+            right: 50,
+            bottom: 30,
+            left: 40
+        },
+        width = +svg.attr("width") - margin.left - margin.right,
+        height = +svg.attr("height") - margin.top - margin.bottom;
+
+    var parseTime = d3.timeParse("%m")
+    bisectDate = d3.bisector(function(d) {
+        return d.month;
+    }).left;
+
+    var x = d3.scaleTime().range([0, width]);
+    var y = d3.scaleLinear().range([height, 0]);
+
+    var line = d3.line()
+        .x(function(d) {
+            return x(d.month);
+        })
+        .y(function(d) {
+            return y(d.value);
+        });
+
+    var g = svg.append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    d3.json("data.json", function(error, data) {
+        if (error) throw error;
+
+        data.forEach(function(d) {
+            d.month = parseTime(d.month);
+            d.value = +d.value;
+        });
+
+        x.domain(d3.extent(data, function(d) {
+            return d.month;
+        }));
+        // y.domain([d3.min(data, function(d) {
+        //     return d.value;
+        // }) / 1.005, d3.max(data, function(d) {
+        //     return d.value;
+        // }) * 1.005])
+        y.domain([0, d3.max(data, function(d) {
+            return d.value;
+        }) * 1.2]);
+
+        g.append("g")
+            .attr("class", "axis axis--x")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x))
+            .selectAll("text")
+            .attr("y", 5)
+            .attr("x", 3)
+            .attr("dy", ".35em")
+            .attr("transform", "rotate(20)")
+            .style("text-anchor", "start")
+
+        // .append("text")
+        //     .attr("class", "axis-title")
+        //     .attr("transform", 0)
+        //     .attr("x", 410)
+        //     .attr("y", -12)
+        //     .attr("dy", ".71em")
+        //     .style("text-anchor", "end")
+        //     .attr("fill", "#5D6971")
+        //     .text("月份");
+
+        g.append("g")
+            .attr("class", "axis axis--y")
+            .call(d3.axisLeft(y).ticks(6).tickFormat(function(d) {
+                return parseInt(d);
+            }))
+            .append("text")
+            .attr("class", "axis-title")
+            .attr("transform", "rotate(-90)")
+            .attr("y", 6)
+            .attr("dy", ".71em")
+            .style("text-anchor", "end")
+            .attr("fill", "#5D6971")
+            .text("股價（元）");
+
+        g.append("path")
+            .datum(data)
+            .attr("class", "line")
+            .attr("d", line);
+
+        var focus = g.append("g")
+            .attr("class", "focus")
+            .style("display", "none");
+
+        focus.append("line")
+            .attr("class", "x-hover-line hover-line")
+            .attr("y1", 0)
+            .attr("y2", height);
+
+        focus.append("line")
+            .attr("class", "y-hover-line hover-line")
+            .attr("x1", width)
+            .attr("x2", width);
+
+        focus.append("circle")
+            .attr("r", 7.5);
+
+        focus.append("text")
+            .attr("x", 15)
+            .attr("dy", ".31em");
+
+
+        svg.append("text")
+            .attr("x", 30 + (width / 2))
+            .attr("y", 10 + (margin.top / 2))
+            .attr("text-anchor", "middle")
+            .style("font-size", "14px")
+            .style("text-decoration", "")
+            .text("騰訊（3月到10月）每月15日股價");
+
+        svg.append("rect")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+            .attr("class", "overlay")
+            .attr("width", width)
+            .attr("height", height)
+            .on("mouseover", function() {
+                focus.style("display", null);
+            })
+            .on("mouseout", function() {
+                focus.style("display", "none");
+            })
+            .on("mousemove", mousemove);
+
+        function mousemove() {
+            var x0 = x.invert(d3.mouse(this)[0]),
+                i = bisectDate(data, x0, 1),
+                d0 = data[i - 1],
+                d1 = data[i],
+                d = x0 - d0.month > d1.month - x0 ? d1 : d0;
+            focus.attr("transform", "translate(" + x(d.month) + "," + y(d.value) + ")");
+            focus.select("text").text(function() {
+                return d.value;
+            });
+            focus.select(".x-hover-line").attr("y2", height - y(d.value));
+            focus.select(".y-hover-line").attr("x2", width + width);
+        }
+    });
+</script>
