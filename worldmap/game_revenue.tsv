@@ -1,0 +1,243 @@
+id	name	revenue	
+CHN	China	"34400"	
+USA	United States	"31535"	
+JPN	Japan	"17715"	
+KOR	"Korea, South"	"5764"	
+DEU	Germany	"4989"
+GBR	United Kingdom	"4731"	
+FRA	France	"3366"
+CAN	Canada	"2399"
+ESP	Spain	"2202"
+ITA	Italy	"2168"
+RUS	Russia	"1657"
+MEX	Mexico	"1577"
+BRA	Brazil	"1452"	
+AUS	Australia	"1293"	
+TWN	Taiwan	"1231"
+IND	India	"1105"	
+IDN	Indonesia	"1084"
+TUR	Turkey	"853"
+SAU	Saudi Arabia	"800"
+THA	Thailand	"667"
+NLD	Netherlands	"646"
+MYS	Malaysia	"633"
+IRN	Iran	"600"
+CHE	Switzerland	"7623438"
+POL	Poland	"541"
+VNM	Vietnam	"472"
+SWE	Sweden	"463"
+PHL	Philippines	"461"	
+ARG	Argentina 	"448"
+HKG	China, Hong Kong SAR	"390"
+BEL	Belgium	"378"
+AUT	Austria	"371"	
+COL	Colombia	"344"
+SGP	Singapore	"319" not listed
+NOR	Norway	"317"
+PRT	Portugal	"291"
+EGY	Egypt	"286"
+DNK	Denmark	"270"
+IRL	Ireland	"264"
+FIN	Finland	"227"
+ARE	United Arab Emirates	"226"	
+CHL	Chile	"216"
+ROU	Romania	"188"
+KAZ	Kazakhstan	"183"
+NGA	Nigeria	"180"	
+PAK	Pakistan	"177"
+PER	Peru	"176"
+QAT	Qatar	"172"
+UKR	Ukraine	"161"
+CZE	Czech Republic	"161"
+GRC	Greece	"156"
+ISR	Israel	"150"
+BGD	Bangladesh	"148"
+DZA	Algeria	"142"
+HUN	Hungary	"134"
+ZAF	South Africa	"129"	
+KWT	Kuwait	"124"
+IRQ	Iraq	"109"
+MAR	Morocco	"105"
+VEN	Venezuela	"103"
+MMR	Burma	"102"	
+OMN	Oman	"93"
+ECU	Ecuador	"93"
+AZE	Azerbaijan	"91"	
+BLR	Belarus	"89"
+SRB	Serbia	"83"
+SVK	Slovakia	"82"
+NZL	New Zealand	"78"
+DOM	Dominican Republic	"69"
+BGR	Bulgaria	"63"
+LBN	Lebanon	"60"
+HRV	Croatia	"57"
+168	China,Macau	"56"	
+PRI	Puerto Rico	"55"
+LTU	Lithuania	"49"
+CUB	Cuba	"48"	
+LUX	Luxembourg	"46"
+JOR	Jordan	"46"
+GTM	Guatemala	"45"
+UZB	Uzbekistan	"44"
+163	Bahrain	"43" not listed
+PRY	Paraguay	"40"
+CRI	Costa Rica	"38"
+PAN	Panama	"37"
+SVN	Slovenia	"37"
+BOL	Bolivia	"37"
+URY	Uruguay	"33"
+LKA	Sri Lanka	"32"
+KEN	Kenya	"31"
+LVA	Latvia	"31"
+GHA	Ghana	"30"
+KHM	Cambodia	"28"
+ETH	Ethiopia	"27"
+BIH	Bosnia and Herzegovina	"26"
+ALB	Albania	"25"
+EST	Estonia	"24"
+BRN	Brunei	"24"
+MDA	Moldova	"23"
+MKD	Macedonia	"21"
+GEO	Georgia	"20"			
+COD	"Congo, Democratic Republic of the"	"0"					
+SDN	Sudan	"0"	 	
+TZA	Tanzania	"0"	 			
+UGA	Uganda	"0"	 					
+AFG	Afghanistan	"0"	 	
+NPL	Nepal	"0"	 					
+YEM	Yemen	"0"	 	
+PRK	"Korea, North"	"0"	 	
+SYR	Syria	"0"	 		
+MOZ	Mozambique	"0"	 	
+MDG	Madagascar	"0"	 	
+CIV	Cote d'Ivoire	"0"	 
+CMR	Cameroon	"0"	 		
+BFA	Burkina Faso	"0"	 	
+NER	Niger	"0"	 	
+MWI	Malawi	"0"	 			
+SEN	Senegal	"0"	 	
+MLI	Mali	"0"	 		
+AGO	Angola	"0"	 	
+ZMB	Zambia	"0"	 
+ZWE	Zimbabwe	"0"	 	
+RWA	Rwanda	"0"	 		
+TUN	Tunisia	"0"	 
+TCD	Chad	"0"	 
+GIN	Guinea	"0"	 	
+SOM	Somalia	"0"	 		
+BDI	Burundi	"0"	 		
+HTI	Haiti	"0"	 	
+BEN	Benin	"0"	 
+HND	Honduras	"0"	 	
+TJK	Tajikistan	"0"	 				
+LAO	Laos	"0"	 	
+LBY	Libya	"0"	 			
+TGO	Togo	"0"	 	
+PNG	Papua New Guinea	"0"	 	
+SLV	El Salvador	"0"	 	
+NIC	Nicaragua	"0"	 	
+ERI	Eritrea	"0"	 		
+KGZ	Kyrgyzstan	"0"	 		
+SLE	Sierra Leone	"0"	 	
+TKM	Turkmenistan	"0"	 	
+CAF	Central African Republic	"0"	 									
+COG	"Congo, Republic of the"	"0"	 			
+LBR	Liberia	"0"	 					
+MRT	Mauritania	"0"	 
+MNG	Mongolia	"0"	 		
+ARM	Armenia	"0"	 	
+JAM	Jamaica	"0"	 	
+PSE	West Bank	"0"	 		
+NAM	Namibia	"0"	 		
+BWA	Botswana	"0"	 	
+LSO	Lesotho	"0"	 	
+GMB	"Gambia, The"	"0"	 	
+KWT	Kosovo	"0"	 
+149	Gaza Strip	"0"	not listed
+GNB	Guinea-Bissau	"0"	 
+GAB	Gabon	"0"	 
+SWZ	Swaziland	"0"	 	
+153	Mauritius	"0"	not listed	
+TTO	Trinidad and Tobago	"0"	 
+TLS	Timor-Leste	"0"	 
+CYP	Cyprus	"0"	 	
+FJI	Fiji	"0"	 		
+160	Comoros	"0"	not listed
+GUY	Guyana	"0"	 	
+DJI	Djibouti	"0"	 	
+BTN	Bhutan	"0"	 	
+MNE	Montenegro	"0"	 	
+GNQ	Equatorial Guinea	"0"	 	
+SLB	Solomon Islands	"0"	 	
+169	Cape Verde	"0"	not listed	
+ESH	Western Sahara	"0"	 	
+SUR	Suriname	"0"	 	
+173	Malta	"0"	not listed
+174	Maldives	"0"	not listed	
+BLZ	Belize	"0"	 	
+BHS	"Bahamas, The"	"0"	 	
+ISL	Iceland	"0"	 	
+179	French Polynesia	"0"	not listed
+180	Barbados	"0"	not listed
+181	Mayotte	"0"	not listed
+NCL	New Caledonia	"0"		
+183	Netherlands Antilles	"0"	not listed
+VUT	Vanuatu	"0"		
+185	Samoa	"0"	not listed
+186	Sao Tome and Principe	"0"	not listed
+187	Saint Lucia	"0"	not listed
+188	Tonga	"0"	not listed
+189	Virgin Islands	"0"	not listed
+190	Grenada	"0"	not listed
+191	"Micronesia, Federated States of"	"0"	not listed
+192	Aruba	"0"	not listed
+193	Saint Vincent and the Grenadines	"0"	not listed
+194	Kiribati	"0"	not listed
+195	Jersey	"0"	not listed
+196	Seychelles	"0"	not listed
+197	Antigua and Barbuda	"0"	not listed
+198	Andorra	"0"	not listed
+199	Isle of Man	"0"	not listed
+DOM	Dominica	"0"
+201	Bermuda	"0"	not listed
+202	American Samoa	"0"	not listed
+203	Marshall Islands	"0"	not listed
+204	Guernsey	"0"	not listed
+GRL	Greenland	"0"	
+206	Cayman Islands	"0"	not listed
+207	Saint Kitts and Nevis	"0"	not listed
+208	Faroe Islands	"0"	not listed
+209	Northern Mariana Islands	"0"	not listed
+210	Liechtenstein	"0"	not listed
+211	San Marino	"0"	not listed
+212	Monaco	"0"	not listed
+213	Saint Martin	"0"	not listed
+214	Gibraltar	"0"	not listed
+215	British Virgin Islands	"0"	not listed
+216	Turks and Caicos Islands	"0"	not listed
+217	Palau	"0"	not listed
+218	Akrotiri	"0"	not listed
+219	Dhekelia	"0"	not listed
+220	Wallis and Futuna	"0"	not listed
+221	Anguilla	"0"	not listed
+222	Nauru	"0"	not listed
+223	Cook Islands	"0"	not listed
+224	Tuvalu	"0"	not listed
+225	"Saint Helena, Ascension, and Tristan da Cunha"	"0"	not listed
+226	Saint Barthelemy	"0"	not listed
+227	Saint Pierre and Miquelon	"0"	not listed
+228	Montserrat	"0"	not listed
+FLK	Falkland Islands (Islas Malvinas)	"0"	
+230	Norfolk Island	"0"	not listed
+231	Svalbard	"0"	not listed
+232	Christmas Island	"0"	not listed
+233	Tokelau	"0"	not listed
+234	Niue	"0"	not listed
+235	Holy See (Vatican City)	"0"	not listed
+236	Cocos (Keeling) Islands	"0"	not listed
+237	Pitcairn Islands	"0"	not listed
+ATA	Antarctica	"0"	
+ATF	French Southern and Antarctic Lands	"0"
+SDS	South Sudan	"0" 
+ABV	Somaliland	"0"
+OSA	Kosovo	"0"
